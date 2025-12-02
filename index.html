@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bastidores Digitais</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#logica">A Lógica</a>
+  <a href="#dados">Os Dados</a>
+  <a href="#visual">O Visual</a>
+  <a href="#sobre">Sobre Nós</a>
+</nav>
+
+<section id="home">
+  <img src="./img/icone do ultimo projeto do ano.svg" alt="Logo da Agência" style="max-width:120px; display:block; margin-bottom:15px;">
+  <h1>Bastidores Digitais</h1>
+  <p>Este projeto analisa como uma funcionalidade de um aplicativo famoso funciona por trás das telas, explorando sua lógica, banco de dados, design e impacto psicológico.</p>
+  <p><strong>Tema exemplo:</strong> Organização dos stories no Instagram.</p>
+</section>
+
+<section id="logica">
+  <h1>A Lógica (Fluxograma)</h1>
+  <div class="mockup-box">
+    <p>[ INÍCIO ] → O usuário abriu o aplicativo.</p>
+    <p>O sistema pergunta: o usuário interage com este perfil com frequência?</p>
+    <p>SE SIM → Mostrar o story primeiro</p>
+    <p>SE NÃO → Jogar o story para o final da fila</p>
+    <p>[ FIM ]</p>
+  </div>
+  <div class="card">
+    <p>O sistema avalia o nível de interação do usuário com cada perfil. Aqueles com maior frequência de cliques, curtidas ou mensagens são priorizados na exibição dos stories.</p>
+  </div>
+</section>
+
+<section id="dados">
+  <h1>Os Dados (Banco de Dados)</h1>
+  <div class="card">
+    <h3>Tabela USUÁRIOS</h3>
+    <ul>
+      <li>id_usuario</li>
+      <li>nome</li>
+      <li>email</li>
+    </ul>
+
+    <h3>Tabela POSTS</h3>
+    <ul>
+      <li>id_post</li>
+      <li>foto</li>
+      <li>legenda</li>
+    </ul>
+
+    <h3>Tabela INTERAÇÕES</h3>
+    <ul>
+      <li>id_interacao</li>
+      <li>id_usuario</li>
+      <li>id_post</li>
+    </ul>
+  </div>
+</section>
+
+<section id="visual">
+  <h1>O Visual (Mockups)</h1>
+  <div class="mockup-box">
+    <p>📱 Mockup 1: Tela de Stories</p>
+    <p>→ Foto e nome do usuário (Tabela USUÁRIOS)</p>
+    <p>→ Barra de progresso (tempo do story)</p>
+  </div>
+
+  <div class="mockup-box">
+    <p>📱 Mockup 2: Feed Principal</p>
+    <p>→ Imagem do post (Tabela POSTS)</p>
+    <p>→ Curtidas e comentários (Tabela INTERAÇÕES)</p>
+  </div>
+</section>
+
+<section id="sobre">
+  <h1>Sobre os Investigadores</h1>
+  <div class="card">
+    <strong>Matheus</strong>
+    <p>Responsável pelo Front-End e estrutura do site. Habilidades em HTML, CSS e organização do layout.</p>
+  </div>
+
+  <div class="card">
+    <strong>Erick Matheus</strong>
+    <p>Responsável pela pesquisa e desenvolvimento do fluxograma do projeto.</p>
+  </div>
+</section>
+
+</body>
+</html>
