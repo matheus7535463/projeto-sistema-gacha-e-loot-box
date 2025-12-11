@@ -1,3 +1,7 @@
+/* ------------------------- */
+/* ESTILO GERAL */
+/* ------------------------- */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -30,31 +34,21 @@ h1 {
     0 0 20px #a77509,
     0 0 40px #a77509,
     0 0 60px #a77509;
-  ;
   text-align: center;
 }
 
-h2 {
+h2, h3, p {
   font-family: Georgia, 'Times New Roman', Times, serif;
   text-shadow:
     0 0 10px #a77509,
     0 0 20px #a77509,
     0 0 40px #a77509,
     0 0 60px #a77509;
-  ;
 }
 
 h3 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  text-shadow:
-    0 0 10px #a77509,
-    0 0 20px #a77509,
-    0 0 40px #a77509,
-    0 0 60px #a77509;
-  
   text-align: center;
 }
-
 
 .mockup-box {
   border: 2px dashed #b9ae1d;
@@ -62,64 +56,49 @@ h3 {
   margin: 20px 0;
 }
 
-.card {
-  background: #311818;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 30px;
-
-}
+/* ------------------------- */
+/* CARD */
+/* ------------------------- */
 
 .card {
   max-width: 800px;
-  margin: 10px auto;
+  margin: 20px auto;
   background-color: rgba(160, 28, 28, 0.986);
   padding: 30px;
   border-radius: 20px;
   color: #ffffff;
   border: 2px solid #131313;
-  transition: 0.4s;
   box-shadow: 0 0 10px #a8108f4b;
+  transition: 0.4s;
 }
 
-p {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  text-shadow:
-    0 0 10px #a77509,
-    0 0 20px #a77509,
-    0 0 40px #a77509,
-    0 0 60px #a77509;
-  ;
+#dados .card {
+  background-color: #000000;
 }
 
+/* ------------------------- */
+/* IMAGENS (CORRIGIDO) */
+/* ------------------------- */
+
+/* REGRA UNIVERSAL — funciona em qualquer tela */
 img {
-  width: 100vh;
-  height: 80vh;
-}
-
-#dados img {
-  width: 160vh;
-
-}
-
-img {
-  width: 50vh;
+  width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
   border-radius: 10px;
 }
 
-#logica img{
-width: 160vh;
-
-}
- 
-#dados .card {
-  background-color: #000000;
+/* Imagens maiores só em telas grandes */
+#dados img,
+#logica img {
+  max-width: 900px;
 }
 
-
+/* ------------------------- */
+/* RESPONSIVIDADE */
+/* ------------------------- */
 
 @media (max-width: 768px) {
   nav {
@@ -130,35 +109,21 @@ width: 160vh;
   section {
     padding: 40px 5%;
   }
+
+  /* imagens sempre menores no tablet */
+  #dados img,
+  #logica img {
+    max-width: 100%;
+  }
 }
-
-.nav-links {
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.card {
-  max-width: 350px;
-}
-
-
-.logo {
-  width: 60px;
-}
-
-#dados img {
-  width: 140vh;
-  height: 90vh;
-}
-
 
 @media (max-width: 480px) {
+
   body {
     padding: 0 2%;
   }
 
-  .nav a {
+  nav a {
     font-size: 14px;
   }
 
@@ -166,11 +131,16 @@ width: 160vh;
     width: 50px;
   }
 
-  .section h3 {
-    font-size: 20px;
+  .card {
+    max-width: 100%;
   }
 
-  .card {
-    width: 100%;
+  /* CELULAR: garante que NENHUMA imagem fica gigante */
+  img,
+  #dados img,
+  #logica img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
   }
 }
